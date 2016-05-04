@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_seccion_1"
+            android:icon="@drawable/esfera"
+            android:title="Directorio" />
+        <item
+            android:id="@+id/menu_seccion_2"
+            android:icon="@drawable/esfera"
+            android:title="Noticias" />
+        <item
+            android:id="@+id/menu_seccion_3"
+            android:icon="@drawable/esfera"
+            android:title="Sugerencias" />
+        <item
+            android:id="@+id/menu_seccion_4"
+            android:icon="@drawable/esfera"
+            android:title="Página Web" />
+        <item
+            android:id="@+id/menu_seccion_5"
+            android:icon="@drawable/esfera"
+            android:title="Cambiar Idioma" />
+
+
+    </group>
+</menu>
