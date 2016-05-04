@@ -43,7 +43,10 @@ public class ListaDeNoticiaFragment extends Fragment implements AdaptadorNoticia
     }
 
     private OnNoticiaSeleccionadaListener listener;
-
+    
+    /**
+     * Constructor de la clase por defecto sin parametros
+     */
     public ListaDeNoticiaFragment() {
         // Required empty public constructor
     }
@@ -56,6 +59,9 @@ public class ListaDeNoticiaFragment extends Fragment implements AdaptadorNoticia
         this.noticias = noticias;
     }
 
+    /**
+     * Metodo oncreate del fragmento, encargado de manejar el estado create del fragmento.
+     */
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,6 +104,7 @@ public class ListaDeNoticiaFragment extends Fragment implements AdaptadorNoticia
     }
 
     /**
+     * El metodo onAttach es el encargado de integrar la activity con el fragmento
      * @param context
      */
     @Override
@@ -119,6 +126,7 @@ public class ListaDeNoticiaFragment extends Fragment implements AdaptadorNoticia
     }
 
     /**
+     * Metodo encargado de los items pertenecientes al menu pasado opr parametro
      * @param menu
      * @param inflater
      */
