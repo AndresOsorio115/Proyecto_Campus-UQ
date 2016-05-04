@@ -16,11 +16,17 @@ public class DataSource {
 
     static{
 
-        TAREAS.add(new Tarea("Trotar 30 minutos","08:00"));
-        TAREAS.add(new Tarea("Estudiar análisis técnico","10:00"));
-        TAREAS.add(new Tarea("Comer 4 rebanadas de manzana","10:30"));
-        TAREAS.add(new Tarea("Asistir al taller de programación gráfica","15:45"));
-        TAREAS.add(new Tarea("Consignarle a Marta","18:00"));
+        TAREAS.add(new Tarea("Andres ososrio","310677899"));
+        TAREAS.add(new Tarea("Erick Vargas","321456765"));
+        TAREAS.add(new Tarea("Pepito Perez","3114332345"));
+        TAREAS.add(new Tarea("Rosa Maria Garcia","3227665478"));
+        TAREAS.add(new Tarea("Hugo Chavez","3143240098"));
+        TAREAS.add(new Tarea("Ronaldinho Gaucho","3046758767"));
+        TAREAS.add(new Tarea("Oliver Atom","3145459988"));
+        TAREAS.add(new Tarea("Michael Jackson","3145455788"));
+        TAREAS.add(new Tarea("Julio Jose","31567803234"));
+        TAREAS.add(new Tarea("Palechos Ramirez","3145459988"));
+        TAREAS.add(new Tarea("Juanita Vanegas","3168973456"));
 
     }
 }

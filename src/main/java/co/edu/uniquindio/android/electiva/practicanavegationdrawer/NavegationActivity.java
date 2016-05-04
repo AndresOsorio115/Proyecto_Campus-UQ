@@ -28,6 +28,8 @@ public class NavegationActivity extends AppCompatActivity implements ListaDeNoti
     private NavigationView navView;
     private ListaDeNoticiaFragment listaDeNoticiaFragment;
     private ArrayList<Noticia> noticias;
+    private DirectoriosActivity directoriosActivity;
+
 
 
     @Override
@@ -49,7 +51,7 @@ public class NavegationActivity extends AppCompatActivity implements ListaDeNoti
             public boolean onNavigationItemSelected(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.menu_seccion_1:
-
+                        ejecutar(directoriosActivity);
                         Log.i("NavigationView", "Pulsada seccion 1");
 
 
@@ -88,7 +90,7 @@ public class NavegationActivity extends AppCompatActivity implements ListaDeNoti
     private void remplazarFragmento(Fragment fragment) {
         getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, fragment).addToBackStack(null).commit();
     }
-    public void ejecutar(View view) {
+    public void ejecutar(Activity activity) {
         Intent i = new Intent(this, DirectoriosActivity.class);
         startActivity(i);
     }
