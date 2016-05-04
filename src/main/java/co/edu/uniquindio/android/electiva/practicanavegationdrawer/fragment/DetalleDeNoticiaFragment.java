@@ -15,6 +15,7 @@ import co.edu.uniquindio.android.electiva.practicanavegationdrawer.R;
 import co.edu.uniquindio.android.electiva.practicanavegationdrawer.vo.Noticia;
 
 /**
+ * Clase con la que se genera el fragmento correspondiente al detalle de la noticia
  */
 public class DetalleDeNoticiaFragment  extends Fragment {
 
@@ -22,7 +23,9 @@ public class DetalleDeNoticiaFragment  extends Fragment {
 
     private Noticia noticia;
 
-
+    /**
+     * Constructor por defecto sin parametros
+     */
     public DetalleDeNoticiaFragment() {
         // Required empty public constructor
     }
@@ -52,10 +55,4 @@ public class DetalleDeNoticiaFragment  extends Fragment {
         titulo.setText(noticia.getTitulo());
 
     }
-
-    /**
-     * Este metodo es el encargado de manejar los click's, generando el intent y arrancando la activity
-     * @param v
-     */
-
 }
