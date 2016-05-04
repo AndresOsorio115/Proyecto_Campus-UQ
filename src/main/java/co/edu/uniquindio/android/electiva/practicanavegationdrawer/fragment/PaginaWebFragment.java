@@ -14,24 +14,33 @@ import android.view.ViewGroup;
 import co.edu.uniquindio.android.electiva.practicanavegationdrawer.R;
 import co.edu.uniquindio.android.electiva.practicanavegationdrawer.util.AdaptadorNoticia;
 
-
-
+/**
+ * Esta clase contiene el fragmento que redirecionara la aplicacion al portal de la universidad
+ */
 public class PaginaWebFragment extends Fragment implements AdaptadorNoticia.OnClickAdaptadorNoticia {
 
 
     private ListaDeNoticiaFragment.OnNoticiaSeleccionadaListener listener;
 
-
+    /**
+     * Constructor de la clase por defecto sin parametros
+     */
     public PaginaWebFragment() {
         // Required empty public constructor
     }
 
+    /**
+     * Metodo encargado de manejar el estado create del fragmento
+     */
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
     }
 
+    /**
+     * Metodo encargado de crear la vista en el contenedor indicado por parametro
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -39,7 +48,10 @@ public class PaginaWebFragment extends Fragment implements AdaptadorNoticia.OnCl
         return inflater.inflate(R.layout.fragment_pagina_web, container, false);
     }
 
-
+    /**
+     * El metodo onAttach es el encargado de integrar la activity con el fragmento
+     * @param context
+     */
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -57,17 +69,27 @@ public class PaginaWebFragment extends Fragment implements AdaptadorNoticia.OnCl
         }
     }
 
+    /**
+     * Metodo que formatea a null el listener del evento
+     */
     @Override
     public void onDetach() {
         super.onDetach();
         listener = null;
     }
 
+    /**
+     * Con este metodo capturamos la posicion para saber que notica fue la selecionada
+     * en la lista de las noticias.
+     */
     @Override
     public void onClickPosition(int pos) {
         listener.onNoticiaSeleccionada(pos);
     }
 
+    /**
+     * Listener de las noticas para obtener el evento que se presento
+     */
     public interface OnNoticiaSeleccionadaListener {
 
         void onNoticiaSeleccionada(int position);
