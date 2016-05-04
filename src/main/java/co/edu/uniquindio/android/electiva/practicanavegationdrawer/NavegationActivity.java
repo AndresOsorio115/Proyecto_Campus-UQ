@@ -1,5 +1,6 @@
 package co.edu.uniquindio.android.electiva.practicanavegationdrawer;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -9,10 +10,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 
 import java.util.ArrayList;
 
 import co.edu.uniquindio.android.electiva.practicanavegationdrawer.activity.DetalleDeNoticiaActivity;
+import co.edu.uniquindio.android.electiva.practicanavegationdrawer.activity.DirectoriosActivity;
 import co.edu.uniquindio.android.electiva.practicanavegationdrawer.fragment.DetalleDeNoticiaFragment;
 import co.edu.uniquindio.android.electiva.practicanavegationdrawer.fragment.ListaDeNoticiaFragment;
 import co.edu.uniquindio.android.electiva.practicanavegationdrawer.fragment.PaginaWebFragment;
@@ -25,6 +28,7 @@ public class NavegationActivity extends AppCompatActivity implements ListaDeNoti
     private NavigationView navView;
     private ListaDeNoticiaFragment listaDeNoticiaFragment;
     private ArrayList<Noticia> noticias;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,9 @@ public class NavegationActivity extends AppCompatActivity implements ListaDeNoti
                 switch (item.getItemId()) {
                     case R.id.menu_seccion_1:
 
+                        Log.i("NavigationView", "Pulsada seccion 1");
+
+
                         break;
                     case R.id.menu_seccion_2:
                         remplazarFragmento(new ListaDeNoticiaFragment());
@@ -57,6 +64,7 @@ public class NavegationActivity extends AppCompatActivity implements ListaDeNoti
                         break;
                     case R.id.menu_seccion_4:
                         remplazarFragmento(new PaginaWebFragment());
+                        Log.i("NavigationView", "Pulsada seccion 4");
                         break;
                 }
                 item.setChecked(true);
@@ -80,6 +88,11 @@ public class NavegationActivity extends AppCompatActivity implements ListaDeNoti
     private void remplazarFragmento(Fragment fragment) {
         getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, fragment).addToBackStack(null).commit();
     }
+    public void ejecutar(View view) {
+        Intent i = new Intent(this, DirectoriosActivity.class);
+        startActivity(i);
+    }
+
 
 
     @Override
