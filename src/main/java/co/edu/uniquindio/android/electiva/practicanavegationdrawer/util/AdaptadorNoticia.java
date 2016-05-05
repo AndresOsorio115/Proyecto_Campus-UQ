@@ -66,6 +66,10 @@ public class AdaptadorNoticia extends RecyclerView.Adapter<AdaptadorNoticia.Noti
         return noticias.size();
     }
 
+    /**
+     * Este viewHolder se encarga de manejar los eventos capturados con el
+     * clickListener.
+     */
     public static class NoticiaViewHolder
             extends RecyclerView.ViewHolder implements View.OnClickListener{
         private TextView txtTitulo;
@@ -77,11 +81,18 @@ public class AdaptadorNoticia extends RecyclerView.Adapter<AdaptadorNoticia.Noti
             txtDescripcion = (TextView) itemView.findViewById(R.id.descripcion_de_detalle_pelicula);
 
         }
+        
+        /**
+         * Seteamos los valores capturados de la noticia
+         */
         public void binNoticia(Noticia p) {
             txtTitulo.setText(p.getTitulo());
             txtDescripcion.setText(p.getDescripcion());
         }
 
+        /**
+         * Metodo encargado de mamejar los eventos del click
+         */
         @Override
         public void onClick(View v) {
             listener.onClickPosition(getAdapterPosition());
@@ -90,6 +101,9 @@ public class AdaptadorNoticia extends RecyclerView.Adapter<AdaptadorNoticia.Noti
         }
     }
 
+    /**
+     * Metodo adaptador que captura las posicion donde se realizo el click.
+     */
     public interface OnClickAdaptadorNoticia{
         public void onClickPosition(int pos);
     }
