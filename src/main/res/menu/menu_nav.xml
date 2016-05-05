@@ -5,23 +5,23 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/menu_seccion_1"
-            android:icon="@drawable/esfera"
+            android:icon="@drawable/directorio"
             android:title="Directorio" />
         <item
             android:id="@+id/menu_seccion_2"
-            android:icon="@drawable/esfera"
+            android:icon="@drawable/noticia"
             android:title="Noticias" />
         <item
             android:id="@+id/menu_seccion_3"
-            android:icon="@drawable/esfera"
+            android:icon="@drawable/sugerencia"
             android:title="Sugerencias" />
         <item
             android:id="@+id/menu_seccion_4"
-            android:icon="@drawable/esfera"
+            android:icon="@drawable/browser"
             android:title="Página Web" />
         <item
             android:id="@+id/menu_seccion_5"
-            android:icon="@drawable/esfera"
+            android:icon="@drawable/idioma"
             android:title="Cambiar Idioma" />
 
 
