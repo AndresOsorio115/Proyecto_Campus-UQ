@@ -6,23 +6,23 @@
         <item
             android:id="@+id/menu_seccion_1"
             android:icon="@drawable/directorio"
-            android:title="Directorio" />
+            android:title="@string/directorio" />
         <item
             android:id="@+id/menu_seccion_2"
             android:icon="@drawable/noticia"
-            android:title="Noticias" />
+            android:title="@string/noticia" />
         <item
             android:id="@+id/menu_seccion_3"
             android:icon="@drawable/sugerencia"
-            android:title="Sugerencias" />
+            android:title="@string/sugerencias" />
         <item
             android:id="@+id/menu_seccion_4"
             android:icon="@drawable/browser"
-            android:title="Página Web" />
+            android:title="@string/pagina" />
         <item
             android:id="@+id/menu_seccion_5"
             android:icon="@drawable/idioma"
-            android:title="Cambiar Idioma" />
+            android:title="@string/cambio_idioma" />
 
 
     </group>

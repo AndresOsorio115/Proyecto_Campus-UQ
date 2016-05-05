@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Campus UQ</string>
+
+    <string name="directorio">Directorio</string>
+    <string name="noticia">Noticias</string>
+    <string name="pagina">Pagina Web</string>
+    <string name="sugerencias">Sugerencia</string>
+    <string name="cambio_idioma">Cambiar Idioma</string>
+
+
+</resources>

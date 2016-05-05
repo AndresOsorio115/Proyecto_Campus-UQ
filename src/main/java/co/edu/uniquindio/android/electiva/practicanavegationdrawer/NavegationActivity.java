@@ -3,6 +3,7 @@ package co.edu.uniquindio.android.electiva.practicanavegationdrawer;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
@@ -39,6 +40,7 @@ public class NavegationActivity extends AppCompatActivity implements ListaDeNoti
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navegation);
 
+        Utilidades.obtenerLenguaje(this);
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_nav_menu);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -47,7 +49,6 @@ public class NavegationActivity extends AppCompatActivity implements ListaDeNoti
         navView.setItemIconTintList(null);
 
         remplazarFragmento(new ListaDeNoticiaFragment());
-        remplazarFragmento(new SugerenciasFragment());
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
@@ -66,7 +67,9 @@ public class NavegationActivity extends AppCompatActivity implements ListaDeNoti
                         Log.i("NavigationView", "Pulsada seccion 3");
                         break;
                     case R.id.menu_seccion_4:
-                        remplazarFragmento(new PaginaWebFragment());
+                        Intent intentPa = new Intent(Intent.ACTION_VIEW);
+                        intentPa.setData(Uri.parse("http://www.uniquindio.edu.co"));
+                        startActivity(intentPa);
                         Log.i("NavigationView", "Pulsada seccion 4");
                         break;
                     case R.id.menu_seccion_5:
