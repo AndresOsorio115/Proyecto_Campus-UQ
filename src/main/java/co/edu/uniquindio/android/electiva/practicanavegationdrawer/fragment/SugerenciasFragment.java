@@ -15,24 +15,35 @@ import co.edu.uniquindio.android.electiva.practicanavegationdrawer.R;
 import co.edu.uniquindio.android.electiva.practicanavegationdrawer.util.AdaptadorNoticia;
 
 
-
+/**
+ * Esta clase contiene el fragmento diseñado para las sugerencias
+ * Implementando el adaptador para las noticias.
+ */
 public class SugerenciasFragment extends Fragment implements AdaptadorNoticia.OnClickAdaptadorNoticia {
 
 
     private ListaDeNoticiaFragment.OnNoticiaSeleccionadaListener listener;
 
+    /**
+     * Constructor de la clase por defectos sin parametros
+     */
     public SugerenciasFragment() {
         // Required empty public constructor
     }
 
-
+    /**
+     * Metodo encargado de manejar el estado onCreate del fragmento
+     */
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
         }
 
-
+    /**
+     * Metodo encargado de cargar la vista en el contendor que
+     * entra por parametro
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -40,7 +51,9 @@ public class SugerenciasFragment extends Fragment implements AdaptadorNoticia.On
         return inflater.inflate(R.layout.fragment_sugerencia, container, false);
     }
 
-
+    /**
+     * Metodo encargado de obtener el listener a partir del fragmento
+     */
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -57,7 +70,7 @@ public class SugerenciasFragment extends Fragment implements AdaptadorNoticia.On
             }
         }
     }
-
+    
     @Override
     public void onDetach() {
         super.onDetach();
