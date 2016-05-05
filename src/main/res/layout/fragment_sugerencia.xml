@@ -11,8 +11,20 @@
         android:text="@string/enviar_sugerencia"
         android:id="@+id/button2"
         android:layout_gravity="center_vertical"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="58dp"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:lines="6"
+        android:layout_above="@+id/button2"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -21,18 +33,19 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/descripcion_sugerencia"
         android:id="@+id/textView"
-        android:layout_alignParentTop="true"
+        android:layout_above="@+id/editText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="88dp" />
+        android:layout_marginBottom="40dp" />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:lines="4" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/sugerencias"
+        android:id="@+id/textView3"
+        android:layout_marginBottom="40dp"
+        android:layout_above="@+id/textView"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2" />
 </RelativeLayout>

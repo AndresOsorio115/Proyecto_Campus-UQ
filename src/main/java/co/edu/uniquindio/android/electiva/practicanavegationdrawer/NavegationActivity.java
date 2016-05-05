@@ -1,6 +1,7 @@
 package co.edu.uniquindio.android.electiva.practicanavegationdrawer;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -10,7 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 
 import java.util.ArrayList;
 
@@ -20,6 +20,7 @@ import co.edu.uniquindio.android.electiva.practicanavegationdrawer.fragment.Deta
 import co.edu.uniquindio.android.electiva.practicanavegationdrawer.fragment.ListaDeNoticiaFragment;
 import co.edu.uniquindio.android.electiva.practicanavegationdrawer.fragment.PaginaWebFragment;
 import co.edu.uniquindio.android.electiva.practicanavegationdrawer.fragment.SugerenciasFragment;
+import co.edu.uniquindio.android.electiva.practicanavegationdrawer.util.Utilidades;
 import co.edu.uniquindio.android.electiva.practicanavegationdrawer.vo.Noticia;
 
 public class NavegationActivity extends AppCompatActivity implements ListaDeNoticiaFragment.OnNoticiaSeleccionadaListener {
@@ -29,6 +30,7 @@ public class NavegationActivity extends AppCompatActivity implements ListaDeNoti
     private ListaDeNoticiaFragment listaDeNoticiaFragment;
     private ArrayList<Noticia> noticias;
     private DirectoriosActivity directoriosActivity;
+
 
 
 
@@ -54,7 +56,6 @@ public class NavegationActivity extends AppCompatActivity implements ListaDeNoti
                         ejecutar(directoriosActivity);
                         Log.i("NavigationView", "Pulsada seccion 1");
 
-
                         break;
                     case R.id.menu_seccion_2:
                         remplazarFragmento(new ListaDeNoticiaFragment());
@@ -67,6 +68,13 @@ public class NavegationActivity extends AppCompatActivity implements ListaDeNoti
                     case R.id.menu_seccion_4:
                         remplazarFragmento(new PaginaWebFragment());
                         Log.i("NavigationView", "Pulsada seccion 4");
+                        break;
+                    case R.id.menu_seccion_5:
+
+                        Utilidades.cambiarIdioma(getBaseContext());
+                        Intent intent = getIntent();
+                        finish();
+                        startActivity(intent);
                         break;
                 }
                 item.setChecked(true);
@@ -97,6 +105,7 @@ public class NavegationActivity extends AppCompatActivity implements ListaDeNoti
 
 
 
+
     @Override
     public void onNoticiaSeleccionada(int position) {
         boolean esFragmento =
@@ -115,4 +124,6 @@ public class NavegationActivity extends AppCompatActivity implements ListaDeNoti
 
 
     }
+
+
 }
