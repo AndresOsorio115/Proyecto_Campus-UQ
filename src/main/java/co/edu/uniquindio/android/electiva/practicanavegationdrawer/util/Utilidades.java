@@ -9,7 +9,7 @@ import android.util.Log;
 import java.util.Locale;
 
 /**
- * Created by Einer on 20/04/2016.
+ * Created by Erick on 20/04/2016.
  */
 public class Utilidades {
 
@@ -18,8 +18,9 @@ public class Utilidades {
     public final static String LENGUAJE_ES = "es";
     public final static String LENGUAJE_EN = "en";
 
-
-
+    /**
+     * Este metodo es el encargado de cambiar el idioma de la aplicacion
+     */
     public static void cambiarIdioma(Context context){
 
         SharedPreferences prefs = context.getSharedPreferences(MIS_PREFERENCIAS, context.MODE_PRIVATE);
